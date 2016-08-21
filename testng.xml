@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Default suite" parallel="false" verbose="1" preserve-order="true">
+	<test verbose="2" name="Default test" parallel="false">
+ 	<parameter name="browser" value="CHROM_BROWER" /> 
+<!-- 	<parameter name="version" value="1.0.2"/>  -->
+		<classes>
+			<class name="project.Login"/>
+		</classes>
+	</test>
+	<listeners>
+		<listener class-name="listener.MyListenter"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	</listeners>
+
+</suite>
