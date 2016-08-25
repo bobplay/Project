@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-ipse
-=======
 # Eclipse
->>>>>>> 75fe5fe7b7906cc55df867a1b1db5015e8a16f62
-=======
-# Eclipse
->>>>>>> 8d6889a28254db007646bc4c5bd0aa2acd6bc66e
 .classpath
 .project
 .settings
+.class
 eclipsebin
 
 bin

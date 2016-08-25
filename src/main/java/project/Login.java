@@ -1,32 +1,18 @@
 package project;
 
-<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import page.DeleteContent;
-import page.IndexDynamic;
 import page.LoginUser;
 import page.UploadJob;
 import page.UploadText;
-
-
-import page.UploadTrip;
-import page.Video;
 
 import com.peilei.framework.BaseCase;
 
@@ -38,15 +24,15 @@ public class Login extends BaseCase{
 	@Test(dataProvider="login")
 	public void ALoginYule(String admin,String passworld){
 		driver.get("http://www.1ayule.com/my/dynamic?login=lg");
-//		driver.manage().window().maximize();
-//		LoginUser initElements = PageFactory.initElements(driver, LoginUser.class);
-//		initElements.loginYule(admin, passworld);
+		driver.manage().window().maximize();
+		LoginUser initElements = PageFactory.initElements(driver, LoginUser.class);
+		initElements.loginYule(admin, passworld);
 		//对cookie处理绕过登录验证码
-		driver.manage().deleteAllCookies();
-		Cookie cookies = new Cookie("PHPSESSID", "0ilvlju2mnpraog5bc3pi6hqk3", "/");
-		driver.manage().addCookie(cookies);	
-		System.out.println(driver.manage().getCookieNamed("PHPSESSID").getValue());
-		driver.get("http://www.1ayule.com/my/dynamic");			
+//		driver.manage().deleteAllCookies();
+//		Cookie cookies = new Cookie("PHPSESSID", "0ilvlju2mnpraog5bc3pi6hqk3", "/");
+//		driver.manage().addCookie(cookies);	
+//		System.out.println(driver.manage().getCookieNamed("PHPSESSID").getValue());
+		driver.get("http://www.1ayule.com/my/dynamic	");		
 	}
 	
 	@DataProvider(name="login")
@@ -133,14 +119,4 @@ public class Login extends BaseCase{
 //		initElements.clickConfrim();
 //	}
 	
-=======
-import com.peilei.framework.BaseCase;
-
-public class Login extends BaseCase{
-	
-	public void aa(){
-		System.out.println("open browser");
-		driver.get("https://www.baidu.com");
-	}
->>>>>>> 8d6889a28254db007646bc4c5bd0aa2acd6bc66e
 }
