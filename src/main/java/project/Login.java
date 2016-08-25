@@ -95,6 +95,7 @@ public class Login extends BaseCase{
 		driver.get("http://www.1ayule.com/job/pubone");
 		UploadJob initElements = PageFactory.initElements(driver, UploadJob.class);
 		initElements.setJob();
+		System.out.println("控制台成功");
 		
 	}
 	//进入用户主页查看原文
