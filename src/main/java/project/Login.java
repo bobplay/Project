@@ -1,5 +1,6 @@
 package project;
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -132,4 +133,14 @@ public class Login extends BaseCase{
 //		initElements.clickConfrim();
 //	}
 	
+=======
+import com.peilei.framework.BaseCase;
+
+public class Login extends BaseCase{
+	
+	public void aa(){
+		System.out.println("open browser");
+		driver.get("https://www.baidu.com");
+	}
+>>>>>>> 8d6889a28254db007646bc4c5bd0aa2acd6bc66e
 }
