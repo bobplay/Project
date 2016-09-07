@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="browser" value="CHROME_BROWER"/>
+  <listeners>
+    <listener class-name="listener.MyListenter"/>
+    <listener class-name="listener.TestngListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test verbose="2" name="Default test">
+    <parameter name="browser" value="CHROME_BROWER"/>
+    <classes>
+      <class name="project.Login"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <parameter name="browser" value="CHROME_BROWER"/>
+    <classes>
+      <class name="project.Login">
+        <methods>
+          <include name="ALoginYule"/>
+          <include name="init"/>
+          <include name="kill"/>
+        </methods>
+      </class> <!-- project.Login -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
